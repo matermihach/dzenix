@@ -1,0 +1,153 @@
+export interface FAQ {
+  id: string;
+  question_en: string;
+  question_fr: string;
+  question_ar: string;
+  question_de: string;
+  answer_en: string;
+  answer_fr: string;
+  answer_ar: string;
+  answer_de: string;
+  category: string;
+  display_order: number;
+  created_at?: string;
+  updated_at?: string;
+}
+
+export interface Service {
+  id: string;
+  slug: string;
+  icon: string;
+  title_en: string;
+  title_fr: string;
+  title_ar: string;
+  title_de: string;
+  description_en: string;
+  description_fr: string;
+  description_ar: string;
+  description_de: string;
+  features_en: string[];
+  features_fr: string[];
+  features_ar: string[];
+  features_de: string[];
+  price_range_dzd?: string;
+  price_range_eur?: string;
+  price_range_usd?: string;
+  is_featured: boolean;
+  display_order: number;
+  created_at?: string;
+  updated_at?: string;
+}
+
+export interface Section {
+  id: string;
+  page_slug: string;
+  section_type: string;
+  title_en?: string;
+  title_fr?: string;
+  title_ar?: string;
+  title_de?: string;
+  subtitle_en?: string;
+  subtitle_fr?: string;
+  subtitle_ar?: string;
+  subtitle_de?: string;
+  content_en?: string;
+  content_fr?: string;
+  content_ar?: string;
+  content_de?: string;
+  cta_text_en?: string;
+  cta_text_fr?: string;
+  cta_text_ar?: string;
+  cta_text_de?: string;
+  cta_link?: string;
+  display_order: number;
+  created_at?: string;
+  updated_at?: string;
+}
+
+export interface Page {
+  id: string;
+  slug: string;
+  title_en: string;
+  title_fr: string;
+  title_ar: string;
+  title_de: string;
+  meta_title_en?: string;
+  meta_title_fr?: string;
+  meta_title_ar?: string;
+  meta_title_de?: string;
+  meta_description_en?: string;
+  meta_description_fr?: string;
+  meta_description_ar?: string;
+  meta_description_de?: string;
+  meta_keywords_en?: string;
+  meta_keywords_fr?: string;
+  meta_keywords_ar?: string;
+  meta_keywords_de?: string;
+  og_title_en?: string;
+  og_title_fr?: string;
+  og_title_ar?: string;
+  og_title_de?: string;
+  og_description_en?: string;
+  og_description_fr?: string;
+  og_description_ar?: string;
+  og_description_de?: string;
+  og_image?: string;
+  canonical_url?: string;
+  robots_index: boolean;
+  is_published: boolean;
+  created_at?: string;
+  updated_at?: string;
+}
+
+export interface SiteSettings {
+  id: string;
+  site_name: string;
+  tagline_en: string;
+  tagline_fr: string;
+  tagline_ar: string;
+  tagline_de: string;
+  description_en: string;
+  description_fr: string;
+  description_ar: string;
+  description_de: string;
+  contact_email: string;
+  contact_phone: string;
+  address_en: string;
+  address_fr: string;
+  address_ar: string;
+  address_de: string;
+  whatsapp_number_1: string;
+  whatsapp_number_2: string;
+  whatsapp_message_en: string;
+  whatsapp_message_fr: string;
+  whatsapp_message_ar: string;
+  whatsapp_message_de: string;
+  social_facebook?: string;
+  social_twitter?: string;
+  social_linkedin?: string;
+  social_instagram?: string;
+  primary_color: string;
+  secondary_color: string;
+  logo_url?: string;
+  logo_width?: number;
+  logo_height?: number;
+  logo_alt_en?: string;
+  logo_alt_fr?: string;
+  logo_alt_ar?: string;
+  logo_alt_de?: string;
+  pattern_enabled: boolean;
+  pattern_opacity_light: number;
+  pattern_opacity_dark: number;
+  pattern_scale: number;
+  pattern_stroke_width: number;
+  pattern_color_light: string;
+  pattern_color_dark: string;
+  pattern_enabled_sections: string[];
+  default_meta_title?: string;
+  default_meta_description?: string;
+  default_meta_keywords?: string;
+  default_og_image?: string;
+  site_base_url?: string;
+  updated_at?: string;
+}
