@@ -2,7 +2,7 @@ import { Header } from '@/components/frontend/Header';
 import { Footer } from '@/components/frontend/Footer';
 import { PatternOverlay } from '@/components/frontend/PatternOverlay';
 import { isRTL } from '@/lib/cms/utils';
-import type { Language } from '@/contexts/LanguageContext';
+import type { Language } from '@/lib/cms/utils';
 
 export default function LangLayout({
   children,

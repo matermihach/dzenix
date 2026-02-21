@@ -26,7 +26,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en');
   const [mounted, setMounted] = useState(false);
 
-  // ✅ 1) أول مرة: إذا الرابط فيه لغة استعملها، وإلا استعمل preference
+  
   useEffect(() => {
     const urlLang = pathname.split('/')[1] as Language;
     if (LOCALES.includes(urlLang)) {
@@ -39,7 +39,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setMounted(true);
   }, []);
 
-  // ✅ 2) أي تغيير في الرابط -> حدّث اللغة
   useEffect(() => {
     const urlLang = pathname.split('/')[1] as Language;
     if (LOCALES.includes(urlLang) && urlLang !== language) {
@@ -70,3 +69,5 @@ export function useLanguage() {
   if (!ctx) throw new Error('useLanguage must be used within a LanguageProvider');
   return ctx;
 }
+
+export type { Language };
