@@ -2,6 +2,7 @@ import { Header } from '@/components/frontend/Header';
 import { Footer } from '@/components/frontend/Footer';
 import { PatternOverlay } from '@/components/frontend/PatternOverlay';
 import { isRTL } from '@/lib/cms/utils';
+import type { Language } from '@/contexts/LanguageContext';
 
 export default function LangLayout({
   children,
@@ -10,9 +11,8 @@ export default function LangLayout({
   children: React.ReactNode;
   params: { lang: string };
 }) {
-  const language = params.lang;
-  const rtl = isRTL(language);
-
+const language = params.lang as Language;
+const rtl = isRTL(language);
   return (
     <div dir={rtl ? 'rtl' : 'ltr'} lang={language}>
       <div className="fixed inset-0 z-0 pointer-events-none">
